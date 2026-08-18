@@ -196,14 +196,26 @@
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      opacity: 1;
+      transform: none;
+      animation: revealPage 0.7s ease both;
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
+    }
+
+    @keyframes revealPage {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ANNOUNCEMENT */
@@ -840,7 +852,7 @@
       top: 50px;
       left: -45px;
       color: var(--rose);
-      content: "✿";
+      content: "âœ¿";
       font-size: 11rem;
       opacity: 0.055;
       transform: rotate(-20deg);
@@ -1367,7 +1379,7 @@
       top: 14px;
       right: 23px;
       color: var(--rose-soft);
-      content: "“";
+      content: "â€œ";
       font-family: "Playfair Display", serif;
       font-size: 6rem;
       line-height: 1;
@@ -1515,7 +1527,7 @@
     .cta-card::before,
     .cta-card::after {
       position: absolute;
-      content: "✿";
+      content: "âœ¿";
       color: white;
       font-size: 11rem;
       opacity: 0.07;
@@ -2398,10 +2410,10 @@
   <div class="announcement">
     <i class="fa-solid fa-sparkles"></i>
     Handmade with love in Scotland
-    <span>✦</span>
+    <span>âœ¦</span>
     UK delivery available
     <span class="announcement-extra">
-      <span>✦</span>
+      <span>âœ¦</span>
       Personalised especially for you
     </span>
   </div>
@@ -2477,7 +2489,7 @@
 
           <p class="hero-description">
             Personalised embroidery, heartfelt handmade gifts and
-            Palestinian-inspired accessories—carefully created to celebrate
+            Palestinian-inspired accessoriesâ€”carefully created to celebrate
             the people and moments you never want to forget.
           </p>
 
@@ -2502,7 +2514,7 @@
             </div>
 
             <div>
-              <div class="stars">★★★★★</div>
+              <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
               <strong>Loved by happy customers</strong>
               <small>Gifts created with genuine care</small>
             </div>
@@ -2792,7 +2804,7 @@
           >
 
           <div class="story-quote">
-            “A handmade gift carries the care and story of the person who made it.”
+            â€œA handmade gift carries the care and story of the person who made it.â€
           </div>
         </div>
 
@@ -2915,11 +2927,11 @@
         <div class="testimonial-grid">
 
           <article class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
 
             <p>
-              “The personalised details made the gift feel incredibly special.
-              It was beautifully finished and carefully prepared.”
+              â€œThe personalised details made the gift feel incredibly special.
+              It was beautifully finished and carefully prepared.â€
             </p>
 
             <div class="customer">
@@ -2932,11 +2944,11 @@
           </article>
 
           <article class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
 
             <p>
-              “A beautiful combination of tradition and modern design. You can
-              really see the care that went into every detail.”
+              â€œA beautiful combination of tradition and modern design. You can
+              really see the care that went into every detail.â€
             </p>
 
             <div class="customer">
@@ -2949,11 +2961,11 @@
           </article>
 
           <article class="testimonial-card reveal">
-            <div class="stars">★★★★★</div>
+            <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
 
             <p>
-              “The WhatsApp ordering process was simple and personal. The gift
-              looked even more beautiful than I imagined.”
+              â€œThe WhatsApp ordering process was simple and personal. The gift
+              looked even more beautiful than I imagined.â€
             </p>
 
             <div class="customer">
@@ -2995,7 +3007,7 @@
             <div class="faq-answer">
               <p>
                 Choose your product and options, add it to your basket and press
-                “Send order on WhatsApp.” Your complete order will be prepared
+                â€œSend order on WhatsApp.â€ Your complete order will be prepared
                 automatically as a WhatsApp message.
               </p>
             </div>
@@ -3056,7 +3068,7 @@
     <section class="cta">
       <div class="container">
         <div class="cta-card reveal">
-          <h2>Let’s turn your idea into something beautiful.</h2>
+          <h2>Letâ€™s turn your idea into something beautiful.</h2>
 
           <p>
             Tell us who the gift is for, what it should say and the colours you
@@ -3148,7 +3160,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Areej Handmade. All rights reserved.</span>
+        <span>Â© 2026 Areej Handmade. All rights reserved.</span>
         <span>Handmade with care and meaning.</span>
       </div>
 
@@ -3211,13 +3223,13 @@
             id="personalisationInput"
             type="text"
             maxlength="80"
-            placeholder="Example: Maha — جارة الرضى"
+            placeholder="Example: Maha â€” Ø¬Ø§Ø±Ø© Ø§Ù„Ø±Ø¶Ù‰"
           >
         </div>
 
         <div class="modal-footer">
           <div class="quantity-selector">
-            <button onclick="changeModalQuantity(-1)">−</button>
+            <button onclick="changeModalQuantity(-1)">âˆ’</button>
             <strong id="modalQuantity">1</strong>
             <button onclick="changeModalQuantity(1)">+</button>
           </div>
@@ -3272,22 +3284,22 @@
 
       <div class="summary-line">
         <span>Subtotal</span>
-        <span id="subtotal">£0.00</span>
+        <span id="subtotal">Â£0.00</span>
       </div>
 
       <div class="summary-line">
         <span>Discount</span>
-        <span id="discountTotal">−£0.00</span>
+        <span id="discountTotal">âˆ’Â£0.00</span>
       </div>
 
       <div class="summary-line">
         <span>UK delivery</span>
-        <span id="deliveryTotal">£0.00</span>
+        <span id="deliveryTotal">Â£0.00</span>
       </div>
 
       <div class="summary-line total">
         <span>Total</span>
-        <span id="finalTotal">£0.00</span>
+        <span id="finalTotal">Â£0.00</span>
       </div>
 
       <button class="whatsapp-checkout" onclick="checkoutWhatsApp()">
@@ -3342,8 +3354,8 @@
 
     /*
       Delivery settings.
-      Standard delivery is £4.95.
-      Delivery becomes free when the basket reaches £60.
+      Standard delivery is Â£4.95.
+      Delivery becomes free when the basket reaches Â£60.
     */
 
     const STANDARD_DELIVERY = 4.95;
@@ -3439,7 +3451,7 @@
     let modalQuantity = 1;
 
     function money(number) {
-      return `£${number.toFixed(2)}`;
+      return `Â£${number.toFixed(2)}`;
     }
 
     function renderProducts(category = "all") {
@@ -3474,7 +3486,7 @@
           <div class="product-details">
             <div class="product-topline">
               <span class="product-category">${product.categoryName}</span>
-              <span class="rating">★★★★★</span>
+              <span class="rating">â˜…â˜…â˜…â˜…â˜…</span>
             </div>
 
             <h3>${product.name}</h3>
@@ -3605,7 +3617,7 @@
       document.getElementById("modalQuantity").textContent = modalQuantity;
 
       document.getElementById("modalAddPrice").textContent =
-        `— ${money(activeProduct.price * modalQuantity)}`;
+        `â€” ${money(activeProduct.price * modalQuantity)}`;
     }
 
     function closeProductModal() {
@@ -3681,7 +3693,7 @@
               }
 
               <div class="cart-controls">
-                <button onclick="changeCartQuantity(${item.cartId}, -1)">−</button>
+                <button onclick="changeCartQuantity(${item.cartId}, -1)">âˆ’</button>
                 <span>${item.quantity}</span>
                 <button onclick="changeCartQuantity(${item.cartId}, 1)">+</button>
 
@@ -3763,11 +3775,11 @@
     function updateTotals() {
       const totals = calculateTotals();
 
-      document.get.getElementById("subtotal").textContent =
+      document.getElementById("subtotal").textContent =
         money(totals.subtotal);
 
       document.getElementById("discountTotal").textContent =
-        `−${money(totals.discount)}`;
+        `âˆ’${money(totals.discount)}`;
 
       document.getElementById("deliveryTotal").textContent =
         totals.delivery === 0 && cart.length > 0
@@ -3795,7 +3807,7 @@
       if (cart.length === 0) {
         text.textContent = "Add products to begin your order.";
       } else if (subtotalAfterDiscount >= FREE_DELIVERY_AMOUNT) {
-        text.textContent = "Wonderful—you have unlocked free UK delivery!";
+        text.textContent = "Wonderfulâ€”you have unlocked free UK delivery!";
       } else {
         text.textContent =
           `Add ${money(FREE_DELIVERY_AMOUNT - subtotalAfterDiscount)} more for free UK delivery.`;
@@ -3809,7 +3821,7 @@
 
       if (code === "WELCOME10") {
         discountPercent = 10;
-        message.textContent = "WELCOME10 applied — you saved 10%.";
+        message.textContent = "WELCOME10 applied â€” you saved 10%.";
         showToast("Your 10% discount has been applied.");
       } else if (!code) {
         discountPercent = 0;
@@ -3838,7 +3850,7 @@
 
       const totals = calculateTotals();
 
-      let message = "Hello Areej Handmade! 🌸\n\n";
+      let message = "Hello Areej Handmade! ðŸŒ¸\n\n";
       message += "I would like to place this order:\n\n";
 
       cart.forEach((item, index) => {
@@ -3876,7 +3888,7 @@
     }
 
     function openGeneralWhatsApp() {
-      if (WHATSAPP_NUMBER === "447000000000") {
+      if (WHATSAPP_NUMBER === "447915678261") {
         alert(
           "Replace 447000000000 in the code with Areej's real WhatsApp number first."
         );
@@ -3884,7 +3896,7 @@
       }
 
       const message =
-        "Hello Areej Handmade! 🌸 I would like to ask about your handmade and personalised products.";
+        "Hello Areej Handmade! ðŸŒ¸ I would like to ask about your handmade and personalised products.";
 
       const url =
         `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -3963,22 +3975,9 @@
     }
 
     function startRevealAnimations() {
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.12
-        }
-      );
-
-      document.querySelectorAll(".reveal").forEach(element => {
-        observer.observe(element);
+      document.querySelectorAll(".reveal").forEach((element, index) => {
+        element.style.animationDelay = `${Math.min(index, 6) * 70}ms`;
+        element.classList.add("visible");
       });
     }
 
