@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Areej Handmade | Personalised Handmade Gifts</title>
+
+  <style>
+    :root {
+      --pink: #f7e3e8;
+      --pink-dark: #c47d91;
+      --gold: #b78a44;
+      --green: #788f79;
+      --cream: #fffaf6;
+      --white: #ffffff;
+      --text: #3f3536;
+      --muted: #74696b;
+      --border: #eadadd;
+      --shadow: 0 14px 35px rgba(81, 57, 62, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 85px 6%;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .section-heading span {
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 8px 0 12px;
+      font-family: Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      padding: 10px 6%;
+      background: rgba(255, 250, 246, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .logo-mark {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      color: white;
+      background: var(--pink-dark);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+    }
+
+    .logo-text strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+    }
+
+    .logo-text small {
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.92rem;
+    }
+
+    nav a:hover {
+      color: var(--pink-dark);
+    }
+
+    .basket-button {
+      position: relative;
+      padding: 10px 16px;
+      color: white;
+      background: var(--text);
+      border: 0;
+      border-radius: 999px;
+    }
+
+    .basket-count {
+      position: absolute;
+      top: -8px;
+      right: -7px;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      color: white;
+      background: var(--pink-dark);
+      border: 2px solid white;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: bold;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      background:
+        radial-gradient(circle at 85% 15%, #f1dce2 0, transparent 30%),
+        linear-gradient(135deg, var(--cream), #fff);
+    }
+
+    .hero-copy {
+      max-width: 620px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      color: #705d34;
+      background: #f6ead7;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 20px;
+      font-family: Georgia, serif;
+      font-size: clamp(3rem, 6vw, 5.7rem);
+      line-height: 1.05;
+    }
+
+    .hero h1 em {
+      color: var(--pink-dark);
+      font-weight: normal;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .primary-button {
+      color: white;
+      background: var(--pink-dark);
+      border: 1px solid var(--pink-dark);
+    }
+
+    .secondary-button {
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--gold);
+    }
+
+    .hero-art {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 480px;
+    }
+
+    .hoop {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(410px, 85vw);
+      aspect-ratio: 1;
+      background: #fffdfb;
+      border: 18px solid #c79a59;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+    }
+
+    .hoop::before,
+    .hoop::after {
+      content: "✿";
+      position: absolute;
+      color: var(--pink-dark);
+      font-size: 4rem;
+    }
+
+    .hoop::before {
+      top: 12%;
+      left: 8%;
+      transform: rotate(-20deg);
+    }
+
+    .hoop::after {
+      right: 10%;
+      bottom: 10%;
+      color: var(--green);
+      transform: rotate(20deg);
+    }
+
+    .hoop-text {
+      text-align: center;
+      font-family: Georgia, serif;
+    }
+
+    .hoop-text small {
+      display: block;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    .hoop-text strong {
+      display: block;
+      margin: 6px 0;
+      color: var(--pink-dark);
+      font-size: 2.6rem;
+    }
+
+    /* CATEGORIES */
+
+    .category-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      background: var(--green);
+    }
+
+    .category {
+      padding: 22px;
+      color: white;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 16px;
+    }
+
+    .category span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    /* SHOP */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .filter-button {
+      padding: 9px 17px;
+      color: var(--text);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+    }
+
+    .filter-button.active,
+    .filter-button:hover {
+      color: white;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1450px;
+      margin: auto;
+    }
+
+    .product-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(81, 57, 62, 0.06);
+    }
+
+    .product-image {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 230px;
+      color: var(--pink-dark);
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.8), transparent 55%),
+        linear-gradient(135deg, #f7e3e8, #e7eee6);
+      font-family: Georgia, serif;
+      font-size: 4rem;
+    }
+
+    .product-image small {
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.7rem;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-category {
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .product-info h3 {
+      margin: 5px 0;
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+    }
+
+    .description {
+      min-height: 48px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .price {
+      display: block;
+      margin: 10px 0 14px;
+      color: var(--pink-dark);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .product-options {
+      display: grid;
+      gap: 9px;
+      margin-bottom: 13px;
+    }
+
+    .product-options label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    .product-options select,
+    .product-options input {
+      width: 100%;
+      margin-top: 3px;
+      padding: 9px 10px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      outline: none;
+    }
+
+    .add-button {
+      width: 100%;
+      padding: 12px;
+      color: white;
+      background: var(--text);
+      border: 0;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .add-button:hover {
+      background: var(--pink-dark);
+    }
+
+    /* PERSONALISATION */
+
+    .personalised {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+      background: var(--pink);
+    }
+
+    .personalised-visual {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--green);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .personalised-visual span {
+      display: block;
+      font-family: Georgia, serif;
+      font-size: 5rem;
+    }
+
+    .personalised-copy h2,
+    .about h2 {
+      margin-bottom: 17px;
+      font-family: Georgia, serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+    }
+
+    .personalised-copy p,
+    .about p {
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 30px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .step-number {
+      display: grid;
+      flex: 0 0 38px;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      color: white;
+      background: var(--gold);
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    /* ABOUT AND EVENTS */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-card {
+      padding: 50px;
+      color: white;
+      background: var(--text);
+      border-radius: 28px;
+    }
+
+    .about-card blockquote {
+      font-family: Georgia, serif;
+      font-size: 1.7rem;
+      line-height: 1.5;
+    }
+
+    .about-card small {
+      display: block;
+      margin-top: 20px;
+      color: var(--pink);
+    }
+
+    .events {
+      background: #f1f5ef;
+    }
+
+    .event-card {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-left: 5px solid var(--gold);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .event-card h3 {
+      margin-bottom: 8px;
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 55px 6%;
+      color: white;
+      background: var(--text);
+      text-align: center;
+    }
+
+    footer h2 {
+      font-family: Georgia, serif;
+      font-size: 2rem;
+    }
+
+    footer p {
+      max-width: 600px;
+      margin: 10px auto 22px;
+      color: #d9cdcf;
+    }
+
+    /* BASKET */
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 199;
+      visibility: hidden;
+      background: rgba(35, 27, 29, 0.45);
+      opacity: 0;
+      transition: 0.25s;
+    }
+
+    .overlay.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .basket-panel {
+      position: fixed;
+      top: 0;
+      right: -500px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      width: min(470px, 100%);
+      height: 100vh;
+      padding: 25px;
+      background: white;
+      box-shadow: -15px 0 40px rgba(0,0,0,0.15);
+      transition: right 0.3s ease;
+    }
+
+    .basket-panel.open {
+      right: 0;
+    }
+
+    .basket-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 17px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .basket-header h2 {
+      font-family: Georgia, serif;
+    }
+
+    .close-button {
+      width: 38px;
+      height: 38px;
+      background: var(--pink);
+      border: 0;
+      border-radius: 50%;
+      font-size: 1.3rem;
+    }
+
+    .basket-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 0;
+    }
+
+    .empty-basket {
+      padding: 50px 10px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .basket-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 13px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .basket-item h4 {
+      margin-bottom: 4px;
+    }
+
+    .basket-item small {
+      display: block;
+      color: var(--muted);
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .quantity button {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      background: var(--pink);
+      border: 0;
+      border-radius: 50%;
+    }
+
+    .remove-button {
+      margin-top: 8px;
+      color: #a24f5c;
+      background: transparent;
+      border: 0;
+      font-size: 0.78rem;
+    }
+
+    .discount-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .discount-row input {
+      flex: 1;
+      min-width: 0;
+      padding: 11px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    .discount-row button {
+      padding: 10px 14px;
+      color: white;
+      background: var(--gold);
+      border: 0;
+      border-radius: 9px;
+    }
+
+    .discount-message {
+      min-height: 22px;
+      color: var(--green);
+      font-size: 0.82rem;
+    }
+
+    .totals {
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px 0;
+    }
+
+    .total-line.final {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .whatsapp-button {
+      width: 100%;
+      padding: 15px;
+      color: white;
+      background: #25d366;
+      border: 0;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1000px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      nav a {
+        display: none;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .hero,
+      .personalised,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-art {
+        min-height: 390px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .logo-text small {
+        display: none;
+      }
+
+      .category-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="#home">
+      <div class="logo-mark">AH</div>
+      <div class="logo-text">
+        <strong>Areej Handmade</strong>
+        <small>Made with meaning</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#personalised">Personalised</a>
+      <a href="#about">About</a>
+      <a href="#events">Events</a>
+
+      <button class="basket-button" onclick="openBasket()">
+        Basket
+        <span class="basket-count" id="basketCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">Handmade in Scotland</span>
+
+        <h1>
+          Meaningful gifts, made <em>personally.</em>
+        </h1>
+
+        <p>
+          Discover elegant embroidery, personalised hoops, Palestinian-inspired
+          accessories and handmade gifts created with care.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#shop">Shop the collection</a>
+          <a class="secondary-button" href="#personalised">
+            Personalised orders
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hoop">
+          <div class="hoop-text">
+            <small>HANDMADE FOR</small>
+            <strong>Your Name</strong>
+            <small>WITH LOVE</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip">
+      <div class="category">
+        <span>✿</span>
+        Personalised Hoops
+      </div>
+
+      <div class="category">
+        <span>🎁</span>
+        Handmade Gifts
+      </div>
+
+      <div class="category">
+        <span>🧵</span>
+        Palestinian Accessories
+      </div>
+
+      <div class="category">
+        <span>✨</span>
+        Event-Stall Products
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="section-heading">
+        <span>Our collection</span>
+        <h2>Handmade with care</h2>
+        <p>
+          Choose your options, add personalisation and place everything in your
+          basket.
+        </p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-button active" onclick="filterProducts('all', this)">
+          All
+        </button>
+
+        <button class="filter-button" onclick="filterProducts('hoops', this)">
+          Hoops
+        </button>
+
+        <button class="filter-button" onclick="filterProducts('gifts', this)">
+          Gifts
+        </button>
+
+        <button class="filter-button" onclick="filterProducts('palestinian', this)">
+          Palestinian
+        </button>
+
+        <button class="filter-button" onclick="filterProducts('events', this)">
+          Event Products
+        </button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="personalised" id="personalised">
+      <div class="personalised-visual">
+        <div>
+          <span>✿</span>
+          <h3>Your idea, handmade for you</h3>
+        </div>
+      </div>
+
+      <div class="personalised-copy">
+        <span class="eyebrow">Something unique</span>
+        <h2>Create a personalised piece</h2>
+
+        <p>
+          Add a name, meaningful wording or preferred colours directly when
+          choosing your product.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <span>Choose your handmade product.</span>
+          </div>
+
+          <div class="step">
+            <span class="step-number">2</span>
+            <span>Select the colour and size.</span>
+          </div>
+
+          <div class="step">
+            <span class="step-number">3</span>
+            <span>Enter the name or wording you would like.</span>
+          </div>
+
+          <div class="step">
+            <span class="step-number">4</span>
+            <span>Send the complete order through WhatsApp.</span>
+          </div>
+        </div>
+
+        <a class="primary-button" href="#shop">Choose a product</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2>Traditional meaning with a personal touch</h2>
+
+        <p>
+          Areej Handmade creates thoughtful pieces that bring together elegant
+          design, personal memories and Palestinian heritage.
+        </p>
+
+        <p>
+          Every item is prepared with care, whether it is a personalised
+          embroidery hoop, a meaningful gift or an accessory for a special
+          occasion.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <blockquote>
+          “A handmade gift carries the time, care and story of the person who
+          created it.”
+        </blockquote>
+
+        <small>— Areej Handmade</small>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="section-heading">
+        <span>Meet us</span>
+        <h2>Events and craft stalls</h2>
+        <p>
+          Visit Areej Handmade at local markets, festivals and community events.
+        </p>
+      </div>
+
+      <div class="event-card">
+        <h3>Upcoming events will appear here</h3>
+        <p>
+          Event dates, locations and stall information can be added when they
+          are confirmed.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Areej Handmade</h2>
+
+    <p>
+      Handmade embroidery, personalised gifts and Palestinian-inspired
+      accessories, created with care in Scotland.
+    </p>
+
+    <button class="primary-button" onclick="openGeneralWhatsApp()">
+      Contact us on WhatsApp
+    </button>
+  </footer>
+
+  <div class="overlay" id="overlay" onclick="closeBasket()"></div>
+
+  <aside class="basket-panel" id="basketPanel">
+    <div class="basket-header">
+      <h2>Your basket</h2>
+      <button class="close-button" onclick="closeBasket()" aria-label="Close basket">
+        ×
+      </button>
+    </div>
+
+    <div class="basket-items" id="basketItems"></div>
+
+    <div>
+      <div class="discount-row">
+        <input
+          id="discountInput"
+          type="text"
+          placeholder="Discount code"
+        >
+
+        <button onclick="applyDiscount()">Apply</button>
+      </div>
+
+      <div class="discount-message" id="discountMessage"></div>
+
+      <div class="totals">
+        <div class="total-line">
+          <span>Subtotal</span>
+          <span id="subtotal">£0.00</span>
+        </div>
+
+        <div class="total-line">
+          <span>Discount</span>
+          <span id="discountTotal">−£0.00</span>
+        </div>
+
+        <div class="total-line">
+          <span>UK delivery</span>
+          <span id="deliveryTotal">£0.00</span>
+        </div>
+
+        <div class="total-line final">
+          <span>Total</span>
+          <span id="finalTotal">£0.00</span>
+        </div>
+      </div>
+
+      <button class="whatsapp-button" onclick="checkoutWhatsApp()">
+        Send order on WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <script>
+    // Replace this with Areej's WhatsApp number.
+    // Example UK number: 447123456789
+    const WHATSAPP_NUMBER = "447000000000";
+
+    const DELIVERY_PRICE = 4.50;
+
+    const products = [
+      {
+        id: 1,
+        name: "Personalised Floral Hoop",
+        category: "hoops",
+        categoryName: "Embroidery",
+        price: 34,
+        icon: "✿",
+        description: "A personalised embroidered hoop with a name and floral details.",
+        colours: ["Blush Pink", "Cream", "Sage Green", "Custom"],
+        sizes: ["15 cm", "20 cm", "25 cm"],
+        personalisable: true
+      },
+      {
+        id: 2,
+        name: "Palestinian Tatreez Keyring",
+        category: "palestinian",
+        categoryName: "Palestinian Accessories",
+        price: 9,
+        icon: "◆",
+        description: "A meaningful accessory inspired by traditional Palestinian patterns.",
+        colours: ["Red and Black", "Green and Gold", "Pink and Gold"],
+        sizes: ["Standard"],
+        personalisable: false
+      },
+      {
+        id: 3,
+        name: "Handmade Gift Box",
+        category: "gifts",
+        categoryName: "Handmade Gifts",
+        price: 24,
+        icon: "🎁",
+        description: "A thoughtful handmade gift box for birthdays and special occasions.",
+        colours: ["Pink and Gold", "Cream and Gold", "Sage Green"],
+        sizes: ["Small", "Medium", "Large"],
+        personalisable: true
+      },
+      {
+        id: 4,
+        name: "Event Accessory Set",
+        category: "events",
+        categoryName: "Event-Stall Products",
+        price: 18,
+        icon: "✨",
+        description: "A coordinated handmade accessory set available at events and online.",
+        colours: ["Pink", "Gold", "Green", "Mixed"],
+        sizes: ["Standard"],
+        personalisable: false
+      }
+    ];
+
+    let basket = JSON.parse(localStorage.getItem("areejBasket")) || [];
+    let discountPercent = 0;
+
+    function renderProducts(filter = "all") {
+      const grid = document.getElementById("productGrid");
+
+      const filteredProducts =
+        filter === "all"
+          ? products
+          : products.filter(product => product.category === filter);
+
+      grid.innerHTML = filteredProducts.map(product => `
+        <article class="product-card">
+          <div class="product-image">
+            ${product.icon}
+            <small>Replace with product photo</small>
+          </div>
+
+          <div class="product-info">
+            <span class="product-category">${product.categoryName}</span>
+            <h3>${product.name}</h3>
+            <p class="description">${product.description}</p>
+            <span class="price">£${product.price.toFixed(2)}</span>
+
+            <div class="product-options">
+              <label>
+                Colour
+                <select id="colour-${product.id}">
+                  ${product.colours.map(colour =>
+                    `<option value="${colour}">${colour}</option>`
+                  ).join("")}
+                </select>
+              </label>
+
+              <label>
+                Size
+                <select id="size-${product.id}">
+                  ${product.sizes.map(size =>
+                    `<option value="${size}">${size}</option>`
+                  ).join("")}
+                </select>
+              </label>
+
+              ${product.personalisable ? `
+                <label>
+                  Personalised name or wording
+                  <input
+                    id="personalisation-${product.id}"
+                    type="text"
+                    maxlength="80"
+                    placeholder="Example: Maha"
+                  >
+                </label>
+              ` : ""}
+            </div>
+
+            <button class="add-button" onclick="addToBasket(${product.id})">
+              Add to basket
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function filterProducts(category, clickedButton) {
+      document.querySelectorAll(".filter-button").forEach(button => {
+        button.classList.remove("active");
+      });
+
+      clickedButton.classList.add("active");
+      renderProducts(category);
+    }
+
+    function addToBasket(productId) {
+      const product = products.find(item => item.id === productId);
+
+      const colour = document.getElementById(`colour-${productId}`).value;
+      const size = document.getElementById(`size-${productId}`).value;
+
+      const personalisationInput =
+        document.getElementById(`personalisation-${productId}`);
+
+      const personalisation = personalisationInput
+        ? personalisationInput.value.trim()
+        : "";
+
+      const existingItem = basket.find(item =>
+        item.id === productId &&
+        item.colour === colour &&
+        item.size === size &&
+        item.personalisation === personalisation
+      );
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        basket.push({
+          cartId: Date.now(),
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          colour,
+          size,
+          personalisation,
+          quantity: 1
+        });
+      }
+
+      saveBasket();
+      renderBasket();
+      openBasket();
+    }
+
+    function renderBasket() {
+      const basketItems = document.getElementById("basketItems");
+
+      if (basket.length === 0) {
+        basketItems.innerHTML = `
+          <div class="empty-basket">
+            <p>Your basket is currently empty.</p>
+          </div>
+        `;
+      } else {
+        basketItems.innerHTML = basket.map(item => `
+          <div class="basket-item">
+            <div>
+              <h4>${item.name}</h4>
+              <small>Colour: ${item.colour}</small>
+              <small>Size: ${item.size}</small>
+
+              ${item.personalisation
+                ? `<small>Personalisation: ${item.personalisation}</small>`
+                : ""
+              }
+
+              <div class="quantity">
+                <button onclick="changeQuantity(${item.cartId}, -1)">−</button>
+                <span>${item.quantity}</span>
+                <button onclick="changeQuantity(${item.cartId}, 1)">+</button>
+              </div>
+
+              <button
+                class="remove-button"
+                onclick="removeItem(${item.cartId})"
+              >
+                Remove
+              </button>
+            </div>
+
+            <strong>£${(item.price * item.quantity).toFixed(2)}</strong>
+          </div>
+        `).join("");
+      }
+
+      updateTotals();
+
+      const itemCount = basket.reduce(
+        (total, item) => total + item.quantity,
+        0
+      );
+
+      document.getElementById("basketCount").textContent = itemCount;
+    }
+
+    function changeQuantity(cartId, amount) {
+      const item = basket.find(item => item.cartId === cartId);
+
+      if (!item) return;
+
+      item.quantity += amount;
+
+      if (item.quantity <= 0) {
+        basket = basket.filter(item => item.cartId !== cartId);
+      }
+
+      saveBasket();
+      renderBasket();
+    }
+
+    function removeItem(cartId) {
+      basket = basket.filter(item => item.cartId !== cartId);
+      saveBasket();
+      renderBasket();
+    }
+
+    function applyDiscount() {
+      const code = document
+        .getElementById("discountInput")
+        .value
+        .trim()
+        .toUpperCase();
+
+      const message = document.getElementById("discountMessage");
+
+      if (code === "WELCOME10") {
+        discountPercent = 10;
+        message.textContent = "WELCOME10 applied: 10% discount.";
+      } else if (code === "") {
+        discountPercent = 0;
+        message.textContent = "Please enter a discount code.";
+      } else {
+        discountPercent = 0;
+        message.textContent = "This discount code is not valid.";
+      }
+
+      updateTotals();
+    }
+
+    function calculateTotals() {
+      const subtotal = basket.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+
+      const discount = subtotal * (discountPercent / 100);
+      const delivery = basket.length > 0 ? DELIVERY_PRICE : 0;
+      const finalTotal = subtotal - discount + delivery;
+
+      return {
+        subtotal,
+        discount,
+        delivery,
+        finalTotal
+      };
+    }
+
+    function updateTotals() {
+      const totals = calculateTotals();
+
+      document.getElementById("subtotal").textContent =
+        `£${totals.subtotal.toFixed(2)}`;
+
+      document.getElementById("discountTotal").textContent =
+        `−£${totals.discount.toFixed(2)}`;
+
+      document.getElementById("deliveryTotal").textContent =
+        `£${totals.delivery.toFixed(2)}`;
+
+      document.getElementById("finalTotal").textContent =
+        `£${totals.finalTotal.toFixed(2)}`;
+    }
+
+    function checkoutWhatsApp() {
+      if (basket.length === 0) {
+        alert("Your basket is empty.");
+        return;
+      }
+
+      const totals = calculateTotals();
+
+      let message = "Hello Areej Handmade! 🌸\n\n";
+      message += "I would like to place the following order:\n\n";
+
+      basket.forEach((item, index) => {
+        message += `${index + 1}. ${item.name}\n`;
+        message += `Quantity: ${item.quantity}\n`;
+        message += `Colour: ${item.colour}\n`;
+        message += `Size: ${item.size}\n`;
+
+        if (item.personalisation) {
+          message += `Personalisation: ${item.personalisation}\n`;
+        }
+
+        message += `Price: £${(item.price * item.quantity).toFixed(2)}\n\n`;
+      });
+
+      message += `Subtotal: £${totals.subtotal.toFixed(2)}\n`;
+
+      if (totals.discount > 0) {
+        message += `Discount: -£${totals.discount.toFixed(2)}\n`;
+      }
+
+      message += `UK delivery: £${totals.delivery.toFixed(2)}\n`;
+      message += `Total: £${totals.finalTotal.toFixed(2)}\n\n`;
+      message += "Please confirm availability and arrange delivery with me. Thank you!";
+
+      const whatsappURL =
+        `https://wa.me/${447915678261}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    }
+
+    function openGeneralWhatsApp() {
+      const message =
+        "Hello Areej Handmade! I would like to ask about your handmade products.";
+
+      const whatsappURL =
+        `https://wa.me/${447915678261}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    }
+
+    function openBasket() {
+      document.getElementById("basketPanel").classList.add("open");
+      document.getElementById("overlay").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeBasket() {
+      document.getElementById("basketPanel").classList.remove("open");
+      document.getElementById("overlay").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    function saveBasket() {
+      localStorage.setItem("areejBasket", JSON.stringify(basket));
+    }
+
+    renderProducts();
+    renderBasket();
+  </script>
+</body>
+</html>
