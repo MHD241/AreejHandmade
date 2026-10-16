@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Areej Handmade | Hand embroidered hoops, bags and gifts</title>
+  <meta name="description" content="Hand embroidered hoops, tote bags, pouches and small gifts, stitched to order by Areej. Order ready-made pieces or ask for your own name and colours.">
+  <meta name="theme-color" content="#FDF8F0">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#shop">Skip to the shop</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="Areej Handmade, home">
+        <img src="assets/logo.png" alt="Areej Handmade" width="140" height="98">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#custom">Custom orders</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="basket-btn" id="open-basket" type="button" aria-label="Open basket">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Basket</span>
+        <span class="count" id="basket-count" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>Hand stitched, one thread at a time.</h1>
+          <p class="lead">Embroidered hoops, tote bags and small gifts, made by Areej. Choose something ready to order, or ask for your own name and colours.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Shop the collection</a>
+            <a class="btn btn-quiet" href="#custom">Ask for a custom piece</a>
+          </div>
+          <p class="hero-note" id="lead-time"></p>
+        </div>
+
+        <figure class="hero-art" aria-label="An embroidery hoop with a pink flower and a leafy sprig being stitched">
+          <svg viewBox="0 0 520 560" role="img" aria-hidden="true">
+            <defs>
+              <pattern id="weave-h" width="7" height="7" patternUnits="userSpaceOnUse">
+                <path d="M0 3.5h7M3.5 0v7" stroke="#8a6a3a" stroke-opacity=".10" stroke-width="1"/>
+              </pattern>
+              <clipPath id="cloth-h"><circle cx="260" cy="290" r="188"/></clipPath>
+            </defs>
+
+            <!-- hoop -->
+            <rect x="236" y="38" width="48" height="46" rx="8" fill="#B88A4F"/>
+            <rect x="248" y="22" width="24" height="26" rx="5" fill="#9C7240"/>
+            <circle cx="260" cy="290" r="214" fill="#D2A86C"/>
+            <circle cx="260" cy="290" r="214" fill="none" stroke="#B88A4F" stroke-width="3"/>
+            <circle cx="260" cy="290" r="196" fill="#E4C48F"/>
+            <circle cx="260" cy="290" r="190" fill="#F1E6D3"/>
+            <circle cx="260" cy="290" r="190" fill="url(#weave-h)"/>
+
+            <g clip-path="url(#cloth-h)">
+              <!-- stems -->
+              <path class="draw thread" style="--d:.3s;--stroke:#6E8350" pathLength="1" d="M258 470 C246 400 278 350 302 292 C324 240 332 196 324 150"/>
+              <path class="draw thread" style="--d:1.1s;--stroke:#6E8350" pathLength="1" d="M192 262 C196 322 232 352 262 398"/>
+
+              <!-- leaves -->
+              <path class="draw leaf" style="--d:1.5s;--fill:#7C9358;--stroke:#566A3C" pathLength="1" transform="translate(259 420) rotate(-158)" d="M0 0 C22 -24 58 -24 78 0 C58 24 22 24 0 0Z"/>
+              <path class="draw leaf" style="--d:1.7s;--fill:#7C9358;--stroke:#566A3C" pathLength="1" transform="translate(268 366) rotate(-22)" d="M0 0 C22 -24 58 -24 78 0 C58 24 22 24 0 0Z"/>
+              <path class="draw leaf" style="--d:1.9s;--fill:#7C9358;--stroke:#566A3C" pathLength="1" transform="translate(290 312) rotate(-156)" d="M0 0 C20 -22 54 -22 72 0 C54 22 20 22 0 0Z"/>
+              <path class="draw leaf" style="--d:2.1s;--fill:#7C9358;--stroke:#566A3C" pathLength="1" transform="translate(310 258) rotate(-24)" d="M0 0 C20 -22 54 -22 72 0 C54 22 20 22 0 0Z"/>
+              <path class="draw leaf" style="--d:2.3s;--fill:#7C9358;--stroke:#566A3C" pathLength="1" transform="translate(322 200) rotate(-150)" d="M0 0 C18 -20 48 -20 64 0 C48 20 18 20 0 0Z"/>
+
+              <!-- flower -->
+              <g transform="translate(192 214)">
+                <path class="draw petal" style="--d:2.5s;--fill:#E27B73;--stroke:#C65B55" pathLength="1" d="M0 0 C-30 -22 -26 -78 0 -86 C26 -78 30 -22 0 0Z"/>
+                <path class="draw petal" style="--d:2.7s;--fill:#E27B73;--stroke:#C65B55" pathLength="1" transform="rotate(72)" d="M0 0 C-30 -22 -26 -78 0 -86 C26 -78 30 -22 0 0Z"/>
+                <path class="draw petal" style="--d:2.9s;--fill:#E27B73;--stroke:#C65B55" pathLength="1" transform="rotate(144)" d="M0 0 C-30 -22 -26 -78 0 -86 C26 -78 30 -22 0 0Z"/>
+                <path class="draw petal" style="--d:3.1s;--fill:#E27B73;--stroke:#C65B55" pathLength="1" transform="rotate(216)" d="M0 0 C-30 -22 -26 -78 0 -86 C26 -78 30 -22 0 0Z"/>
+                <path class="draw petal" style="--d:3.3s;--fill:#E27B73;--stroke:#C65B55" pathLength="1" transform="rotate(288)" d="M0 0 C-30 -22 -26 -78 0 -86 C26 -78 30 -22 0 0Z"/>
+                <g class="fade" style="--d:3.6s">
+                  <g stroke="#F6B3AC" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 7" fill="none">
+                    <path d="M0 -14V-70"/><path d="M0 -14V-70" transform="rotate(72)"/><path d="M0 -14V-70" transform="rotate(144)"/><path d="M0 -14V-70" transform="rotate(216)"/><path d="M0 -14V-70" transform="rotate(288)"/>
+                  </g>
+                  <circle r="15" fill="#C58B1E"/>
+                  <circle cx="-5" cy="-4" r="3.4" fill="#F0C46A"/><circle cx="5" cy="-5" r="3.4" fill="#F0C46A"/><circle cx="0" cy="5" r="3.4" fill="#F0C46A"/>
+                </g>
+              </g>
+
+              <!-- berries -->
+              <g class="fade" style="--d:2.6s">
+                <circle cx="324" cy="140" r="11" fill="#C58B1E"/>
+                <circle cx="347" cy="170" r="8" fill="#C58B1E"/>
+                <path d="M324 150 C330 160 340 164 347 170" stroke="#6E8350" stroke-width="4" fill="none" stroke-linecap="round"/>
+              </g>
+            </g>
+
+            <!-- needle and thread -->
+            <g class="needle">
+              <path class="draw thread" style="--d:3.4s;--stroke:#E27B73" pathLength="1" d="M446 120 C500 190 470 300 392 352 C350 380 330 420 340 468"/>
+              <g transform="translate(446 70) rotate(14)">
+                <path d="M0 0 L0 190" stroke="#C58B1E" stroke-width="7" stroke-linecap="round"/>
+                <path d="M0 0 L0 190" stroke="#E5B04A" stroke-width="2" stroke-linecap="round" transform="translate(-1.5 0)"/>
+                <ellipse cx="0" cy="22" rx="3.6" ry="12" fill="#FDF8F0"/>
+              </g>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section shop" id="shop" aria-labelledby="shop-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="shop-title">The shop</h2>
+          <p>Every piece is embroidered by hand, so no two are exactly alike.</p>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="Filter by type"></div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CUSTOM -->
+    <section class="section custom" id="custom" aria-labelledby="custom-title">
+      <div class="wrap custom-grid">
+        <div class="custom-copy">
+          <h2 id="custom-title">Want something made just for you?</h2>
+          <p>Tell Areej what you have in mind: a name, a flower, a pet, your favourite colours. She will reply with a sketch idea, a price and a date.</p>
+          <ul class="ticks">
+            <li>Names, initials and dates</li>
+            <li>Gifts for weddings, babies and birthdays</li>
+            <li>Your own design, matched to your colours</li>
+          </ul>
+        </div>
+        <form class="custom-form" id="custom-form" novalidate>
+          <div class="field">
+            <label for="c-what">What would you like?</label>
+            <select id="c-what" required>
+              <option>An embroidery hoop</option>
+              <option>A tote bag or pouch</option>
+              <option>A patch</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-idea">Describe your idea</label>
+            <textarea id="c-idea" rows="4" placeholder="Words to stitch, flowers or shapes, colours, who it is for, and when you need it" required></textarea>
+          </div>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input id="c-name" type="text" autocomplete="name" required>
+          </div>
+          <p class="form-error" id="c-error" role="alert" hidden></p>
+          <div class="form-actions">
+            <button class="btn btn-warm" type="button" id="c-wa">Send on WhatsApp</button>
+            <button class="btn btn-ghost-light" type="button" id="c-mail">Send by email</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ABOUT + HOW IT WORKS -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <h2 id="about-title">Made slowly, on purpose</h2>
+          <p>Areej Handmade is a small studio. Each hoop, bag and patch is designed, stitched and finished by one pair of hands, with cotton thread and natural fabrics where possible.</p>
+          <p>Because everything is made to order, you will wait a little. What arrives is a piece that was made for you, and not one of a thousand on a shelf.</p>
+        </div>
+        <ol class="steps" aria-label="How ordering works">
+          <li><strong>Choose</strong><span>Add pieces to your basket, or send a custom request.</span></li>
+          <li><strong>Send your order</strong><span>One tap sends it to Areej on WhatsApp or by email.</span></li>
+          <li><strong>Confirm and pay</strong><span>Areej checks the details, confirms delivery and sends payment details.</span></li>
+          <li><strong>Wait for the post</strong><span>Your piece is stitched, wrapped and sent.</span></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap foot-grid">
+      <div>
+        <img src="assets/logo.png" alt="Areej Handmade" width="150" height="105">
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul class="plain">
+          <li><a id="f-wa" href="#" rel="noopener">WhatsApp</a></li>
+          <li><a id="f-mail" href="#">Email</a></li>
+          <li id="f-ig-li" hidden><a id="f-ig" href="#" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Orders</h2>
+        <p id="f-lead"></p>
+        <p id="f-delivery"></p>
+      </div>
+    </div>
+    <div class="wrap legal"><p>© <span id="year"></span> Areej Handmade. All embroidery is made by hand.</p></div>
+  </footer>
+
+  <!-- PRODUCT DIALOG -->
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="pd-name">
+    <button class="close" type="button" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="pd-grid">
+      <div class="pd-art" id="pd-art"></div>
+      <div class="pd-info">
+        <p class="pd-cat" id="pd-cat"></p>
+        <h2 id="pd-name"></h2>
+        <p class="pd-price" id="pd-price"></p>
+        <p id="pd-blurb"></p>
+        <ul class="pd-details" id="pd-details"></ul>
+        <div class="field" id="pd-personalise" hidden>
+          <label for="pd-text" id="pd-text-label"></label>
+          <input id="pd-text" type="text">
+          <p class="form-error" id="pd-error" role="alert" hidden></p>
+        </div>
+        <div class="pd-buy">
+          <div class="qty" role="group" aria-label="Quantity">
+            <button type="button" id="pd-minus" aria-label="One fewer">−</button>
+            <output id="pd-qty">1</output>
+            <button type="button" id="pd-plus" aria-label="One more">+</button>
+          </div>
+          <button class="btn btn-primary" type="button" id="pd-add">Add to basket</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- BASKET DRAWER -->
+  <dialog class="basket-dialog" id="basket-dialog" aria-labelledby="bk-title">
+    <div class="bk-head">
+      <h2 id="bk-title">Your basket</h2>
+      <button class="close" type="button" data-close aria-label="Close basket">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="bk-body" id="bk-body"></div>
+    <div class="bk-foot" id="bk-foot" hidden>
+      <div class="bk-total"><span>Total, before delivery</span><strong id="bk-total"></strong></div>
+      <form id="order-form" novalidate>
+        <div class="field">
+          <label for="o-name">Your name</label>
+          <input id="o-name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="o-address">Delivery address</label>
+          <textarea id="o-address" rows="3" autocomplete="street-address" required></textarea>
+        </div>
+        <div class="field">
+          <label for="o-note">Anything Areej should know? (optional)</label>
+          <textarea id="o-note" rows="2"></textarea>
+        </div>
+        <p class="form-error" id="o-error" role="alert" hidden></p>
+        <div class="form-actions stack">
+          <button class="btn btn-primary" type="button" id="o-wa">Send order on WhatsApp</button>
+          <button class="btn btn-ghost" type="button" id="o-mail">Send order by email</button>
+        </div>
+        <p class="small" id="o-payment"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
