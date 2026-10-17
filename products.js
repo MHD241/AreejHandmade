@@ -1,12 +1,141 @@
-/* Product photographs below are AI-generated illustrative previews, not photos of finished stock. */
-window.CATEGORIES = ['Hoops','Bags and pouches','Small gifts'];
+
+/* ============================================
+   AREEJ HANDMADE — COMPLETE PRODUCT CATALOGUE
+   ============================================ */
+
+window.CATEGORIES = [
+  "Hoops",
+  "Bags and pouches",
+  "Small gifts"
+];
+
 window.PRODUCTS = [
- {id:'wildflower-hoop',name:'Wildflower hoop',category:'Hoops',price:32,blurb:'A single pink flower and a trailing sprig, stitched on natural linen and framed in a wooden hoop. Ready to hang.',details:['Hand embroidered','Wooden hoop, about 15 cm across','Finished on the back, ready to hang'],personalise:null,photo:'assets/wildflower-hoop.jpg'},
- {id:'name-hoop',name:'Name hoop',category:'Hoops',price:38,blurb:'Your name or a short word stitched in thread, with a small flower underneath. A gift for a new baby, a bedroom door or a best friend.',details:['Hand embroidered to order','Up to 12 letters','Wooden hoop, about 15 cm across'],personalise:{label:'Name or word to stitch',placeholder:'For example: Layla',max:12},photo:'assets/name-hoop.jpg'},
- {id:'lavender-hoop',name:'Lavender hoop',category:'Hoops',price:28,blurb:'Three stems of lavender in soft purples on pale sage cloth. Quiet, calm and good above a desk.',details:['Hand embroidered','Wooden hoop, about 12 cm across','Finished on the back, ready to hang'],personalise:null,photo:'assets/lavender-hoop.jpg'},
- {id:'sprig-tote',name:'Sprig tote bag',category:'Bags and pouches',price:26,blurb:'A sturdy canvas tote with a leafy sprig stitched on the front. Big enough for shopping, books and a lunch.',details:['Hand embroidered front','Long handles that fit over the shoulder','Machine washable on a cool, gentle wash'],personalise:null,photo:'assets/sprig-tote.jpg'},
- {id:'daisy-pouch',name:'Daisy pouch',category:'Bags and pouches',price:18,blurb:'A small drawstring pouch with a white daisy on warm yellow cloth. Holds jewellery, keys or a few knitting notions.',details:['Hand embroidered','Drawstring closure','About 14 cm wide'],personalise:null,photo:'assets/daisy-pouch.jpg'},
- {id:'heart-patch',name:'Heart patch',category:'Small gifts',price:9,blurb:'A stitched coral heart on denim blue, with a running-stitch border. Sew it onto a jacket, a bag or a pair of jeans.',details:['Hand embroidered','About 7 cm wide','Sew on'],personalise:null,photo:'assets/heart-patch.jpg'},
- {id:'lavender-sachets',name:'Lavender sachets, set of two',category:'Small gifts',price:14,blurb:'Two small stitched sachets filled with dried lavender. Tuck one in a drawer and give the other away.',details:['Two sachets, each about 8 cm square','Hand embroidered','Filled with dried lavender'],personalise:null,photo:'assets/lavender-sachets.jpg'},
- {id:'flower-card',name:'Embroidered flower card',category:'Small gifts',price:7,blurb:'A blank card with a small stitched flower on the front. The embroidery is a keepsake as well as a greeting.',details:['Blank inside, envelope included','Hand embroidered','About A6 size'],personalise:{label:'Message to write inside (optional)',placeholder:'For example: Happy birthday, Mum',max:60,required:false},photo:'assets/flower-card.jpg'}
+  {
+    id: "wildflower-hoop",
+    name: "Wildflower hoop",
+    category: "Hoops",
+    price: 32,
+    blurb: "A single pink flower and a trailing sprig, stitched on natural linen and framed in a wooden hoop. Ready to hang.",
+    details: [
+      "Hand embroidered",
+      "Wooden hoop, about 15 cm across",
+      "Finished on the back, ready to hang"
+    ],
+    personalise: null,
+    photo: "assets/wildflower-hoop.jpg"
+  },
+
+  {
+    id: "name-hoop",
+    name: "Name hoop",
+    category: "Hoops",
+    price: 38,
+    blurb: "Your name or a short word stitched in thread, with a small flower underneath. A gift for a new baby, a bedroom door or a best friend.",
+    details: [
+      "Hand embroidered to order",
+      "Up to 12 letters",
+      "Wooden hoop, about 15 cm across"
+    ],
+    personalise: {
+      label: "Name or word to stitch",
+      placeholder: "For example: Layla",
+      max: 12
+    },
+    photo: "assets/name-hoop.jpg"
+  },
+
+  {
+    id: "lavender-hoop",
+    name: "Lavender hoop",
+    category: "Hoops",
+    price: 28,
+    blurb: "Three stems of lavender in soft purples on pale sage cloth. Quiet, calm and good above a desk.",
+    details: [
+      "Hand embroidered",
+      "Wooden hoop, about 12 cm across",
+      "Finished on the back, ready to hang"
+    ],
+    personalise: null,
+    photo: "assets/lavender-hoop.jpg"
+  },
+
+  {
+    id: "sprig-tote",
+    name: "Sprig tote bag",
+    category: "Bags and pouches",
+    price: 26,
+    blurb: "A sturdy canvas tote with a leafy sprig stitched on the front. Big enough for shopping, books and a lunch.",
+    details: [
+      "Hand embroidered front",
+      "Long handles that fit over the shoulder",
+      "Machine washable on a cool, gentle wash"
+    ],
+    personalise: null,
+    photo: "assets/sprig-tote.jpg"
+  },
+
+  {
+    id: "daisy-pouch",
+    name: "Daisy pouch",
+    category: "Bags and pouches",
+    price: 18,
+    blurb: "A small drawstring pouch with a white daisy on warm yellow cloth. Holds jewellery, keys or a few knitting notions.",
+    details: [
+      "Hand embroidered",
+      "Drawstring closure",
+      "About 14 cm wide"
+    ],
+    personalise: null,
+    photo: "assets/daisy-pouch.jpg"
+  },
+
+  {
+    id: "heart-patch",
+    name: "Heart patch",
+    category: "Small gifts",
+    price: 9,
+    blurb: "A stitched coral heart on denim blue, with a running-stitch border. Sew it onto a jacket, a bag or a pair of jeans.",
+    details: [
+      "Hand embroidered",
+      "About 7 cm wide",
+      "Sew on"
+    ],
+    personalise: null,
+    photo: "assets/heart-patch.jpg"
+  },
+
+  {
+    id: "lavender-sachets",
+    name: "Lavender sachets, set of two",
+    category: "Small gifts",
+    price: 14,
+    blurb: "Two small stitched sachets filled with dried lavender. Tuck one in a drawer and give the other away.",
+    details: [
+      "Two sachets, each about 8 cm square",
+      "Hand embroidered",
+      "Filled with dried lavender"
+    ],
+    personalise: null,
+    photo: "assets/lavender-sachets.jpg"
+  },
+
+  {
+    id: "flower-card",
+    name: "Embroidered flower card",
+    category: "Small gifts",
+    price: 7,
+    blurb: "A blank card with a small stitched flower on the front. The embroidery is a keepsake as well as a greeting.",
+    details: [
+      "Blank inside, envelope included",
+      "Hand embroidered",
+      "About A6 size"
+    ],
+    personalise: {
+      label: "Message to write inside (optional)",
+      placeholder: "For example: Happy birthday, Mum",
+      max: 60,
+      required: false
+    },
+    photo: "assets/flower-card.jpg"
+  }
 ];
